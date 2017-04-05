@@ -1,0 +1,31 @@
+{
+  "name": "webshame",
+  "version": "1.0.0",
+  "description": "Chrome Extension that monitors your browsing history and informs your friends when you've spent too much time on a shameful website like reddit so they can shame you",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/server.js",
+    "start-blind": "nodemon server/server.js 2>&1 | log/.predate.sh >> log/server.log & ",
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webshame/main.git"
+  },
+  "keywords": [
+    "webshame",
+    "web",
+    "shame"
+  ],
+  "author": "Zachary Weidenbach",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webshame/main/issues"
+  },
+  "homepage": "https://github.com/webshame/main#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "nodemon": "^1.11.0"
+  }
+}
